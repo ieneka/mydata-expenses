@@ -1,0 +1,32 @@
+{
+  "name": "mydata-expenses",
+  "version": "0.1.0",
+  "description": "Expense classification for AADE myDATA (Greece): read received invoices, validate E3 combinations and send SendExpensesClassification with the rules AADE enforces but does not document.",
+  "license": "MIT",
+  "author": "Taktiko (https://www.taktiko.gr)",
+  "repository": { "type": "git", "url": "git+https://github.com/ieneka/mydata-expenses.git" },
+  "homepage": "https://github.com/ieneka/mydata-expenses#readme",
+  "bugs": { "url": "https://github.com/ieneka/mydata-expenses/issues" },
+  "keywords": ["mydata", "aade", "greece", "e3", "expenses", "classification", "invoices", "e-invoicing", "vat", "accounting"],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "@types/xml2js": "^0.4.14",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.14",
+    "typescript": "^5.0.0"
+  }
+}
